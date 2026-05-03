@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente de Viagens Independente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌍 Agente de Viagens Independente</h1>
+    <p>Sua próxima aventura começa aqui. Pacotes exclusivos e atendimento personalizado.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="#pacotes">✈️ Pacotes</a>
+    <a href="#documentacao">📄 Documentação</a>
+    <a href="#contato">📞 Contato</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- PACOTES DE VIAGEM -->
+    <h2 class="section-title" id="pacotes">✈️ Nossos Pacotes de Viagem</h2>
+    <div class="cards-grid">
+
+      <a href="petropolis.html" class="card" target="_blank">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600');">
+          <span class="card-badge">Nacional</span>
+        </div>
+        <div class="card-body">
+          <h3>🌲 Petrópolis / RS</h3>
+          <p>Descubra as belezas da Serra Gaúcha com passeios incríveis, gastronomia típica e muito contato com a natureza.</p>
+          <span class="date">📅 15 a 18 de Outubro de 2026</span>
+        </div>
+      </a>
+
+      <a href="hohenau.html" class="card" target="_blank">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600');">
+          <span class="card-badge">Internacional</span>
+        </div>
+        <div class="card-body">
+          <h3>🌴 Hohenau / Paraguai</h3>
+          <p>Compras, cultura paraguaia e passeios relaxantes em uma das cidades mais acolhedoras do Paraguai.</p>
+          <span class="date">📅 24 a 29 de Setembro de 2026</span>
+        </div>
+      </a>
+
+      <a href="alemanha.html" class="card" target="_blank">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600');">
+          <span class="card-badge">Europa</span>
+        </div>
+        <div class="card-body">
+          <h3>🏰 Alemanha (saindo de Porto Alegre)</h3>
+          <p>Uma viagem inesquecível pela Europa. Castelos de conto de fadas, cervejarias históricas e cultura milenar.</p>
+          <span class="date">📅 Maio de 2027 — Data a definir</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- DOCUMENTAÇÃO -->
+    <h2 class="section-title" id="documentacao">📄 Documentação Necessária</h2>
+    <div class="cards-grid">
+
+      <a href="docs-petropolis.html" class="card doc-card" target="_blank">
+        <div class="card-img">📋</div>
+        <div class="card-body">
+          <h3>Documentação — Petrópolis/RS</h3>
+          <p>Veja tudo o que você precisa levar para viajar dentro do Brasil. Documentos, dicas de saúde e mais.</p>
+          <span class="date">Clique para ver →</span>
+        </div>
+      </a>
+
+      <a href="docs-hohenau.html" class="card doc-card" target="_blank">
+        <div class="card-img">📋</div>
+        <div class="card-body">
+          <h3>Documentação — Hohenau/Paraguai</h3>
+          <p>Passaporte, identidade, vacinas e tudo sobre a fronteira Brasil-Paraguai. Esteja preparado!</p>
+          <span class="date">Clique para ver →</span>
+        </div>
+      </a>
+
+      <a href="docs-alemanha.html" class="card doc-card" target="_blank">
+        <div class="card-img">📋</div>
+        <div class="card-body">
+          <h3>Documentação — Alemanha</h3>
+          <p>Passaporte europeu, visto Schengen, seguro viagem e checklist completo para a Europa.</p>
+          <span class="date">Clique para ver →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- INSTAGRAM -->
+    <div class="instagram-section">
+      <h2>📸 Siga-nos no Instagram</h2>
+      <p>Acompanhe fotos das nossas viagens, depoimentos e novidades em primeira mão!</p>
+      <a href="https://instagram.com" target="_blank">@agenteviagens</a>
+    </div>
+
+    <!-- FORMULÁRIO DE CONTATO -->
+    <h2 class="section-title" id="contato">📞 Fale Conosco</h2>
+    <div class="form-section">
+      <form id="formContato" onsubmit="enviarContato(event)">
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" required placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input type="tel" id="telefone" required placeholder="(51) 99999-9999">
+        </div>
+        <div class="form-group">
+          <label for="viagem">Viagem de interesse</label>
+          <select id="viagem" required>
+            <option value="">Selecione...</option>
+            <option value="petropolis">Petrópolis/RS — Out/2026</option>
+            <option value="hohenau">Hohenau/Paraguai — Set/2026</option>
+            <option value="alemanha">Alemanha — Mai/2027</option>
+            <option value="duvidas">Ainda não decidi / Dúvidas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem, dúvidas ou solicitações..."></textarea>
+        </div>
+        <button type="submit" class="btn">📨 Enviar Mensagem</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Agente de Viagens Independente. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- CHAT DE IA -->
+  <div class="chat-widget">
+    <div class="chat-box" id="chatBox">
+      <div class="chat-header">🤖 Assistente de Viagens</div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Pergunte sobre roteiro, valores, horários..." onkeypress="if(event.key==='Enter')enviarMensagem()">
+        <button onclick="enviarMensagem()">➤</button>
+      </div>
+    </div>
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+  </div>
+
+  <script>
+    // Toggle Chat
+    function toggleChat() {
+      const box = document.getElementById('chatBox');
+      box.classList.toggle('active');
+      if (box.classList.contains('active') && document.getElementById('chatMessages').children.length === 0) {
+        adicionarMensagem('bot', 'Olá! 👋 Sou seu assistente virtual de viagens. Posso te ajudar com:
+
+• 🗺️ Roteiros das viagens
+• 💰 Valores e formas de pagamento
+• ⏰ Horários de saída e chegada
+• 📝 Documentação necessária
+• 🏨 Informações sobre hospedagem
+
+Sobre qual viagem você tem dúvidas?');
+      }
+    }
+
+    function adicionarMensagem(tipo, texto) {
+      const div = document.createElement('div');
+      div.className = 'message ' + tipo;
+      div.innerText = texto;
+      document.getElementById('chatMessages').appendChild(div);
+      document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
+    }
+
+    function enviarMensagem() {
+      const input = document.getElementById('chatInput');
+      const texto = input.value.trim();
+      if (!texto) return;
+      adicionarMensagem('user', texto);
+      input.value = '';
+      setTimeout(() => responderIA(texto), 600);
+    }
+
+    function responderIA(pergunta) {
+      const p = pergunta.toLowerCase();
+      let resposta = '';
+
+      if (p.includes('petrópolis') || p.includes('petropolis') || p.includes('rs')) {
+        if (p.includes('valor') || p.includes('preço') || p.includes('preco') || p.includes('custa') || p.includes('quanto')) {
+          resposta = '💰 O pacote para Petrópolis/RS está em fase de fechamento de valores.
+
+O investimento estimado é de R$ 1.890,00 por pessoa (em até 10x no cartão).
+
+Inclui:
+• 🚌 Transporte ida e volta
+• 🏨 3 noites de hospedagem
+• 🍽️ Café da manhã
+• 🗺️ Passeios guiados
+
+Entre em contato pelo formulário para garantir sua reserva com condições especiais!';
+        } else if (p.includes('horário') || p.includes('horario') || p.includes('hora') || p.includes('sai') || p.includes('chega')) {
+          resposta = '⏰ Horários previstos — Petrópolis/RS:
+
+🚌 Saída de Porto Alegre: 15/10 às 07h00
+🏨 Check-in hotel: 15/10 às 14h00
+🏠 Retorno: 18/10 às 17h00
+📍 Chegada em Porto Alegre: 18/10 às 21h00 (previsto)
+
+*Horários podem sofrer pequenos ajustes. Você será informado com antecedência.';
+        } else if (p.includes('roteiro') || p.includes('passeio') || p.includes('o que') || p.includes('faz')) {
+          resposta = '🗺️ Roteiro — Petrópolis/RS (15 a 18/10/2026):
+
+📅 Dia 15: Saída de POA → Chegada → Check-in → Jantar de boas-vindas
+📅 Dia 16: Passeio pela Serra → Cachoeiras → Almoço típico → Tarde livre
+📅 Dia 17: City tour Petrópolis → Museu → Vinícola → Jantar especial
+📅 Dia 18: Café da manhã → Check-out → Parada em Gramado → Retorno a POA
+
+Tem muita natureza, gastronomia e cultura gaúcha! 🌲';
+        } else {
+          resposta = '🌲 Petrópolis/RS — 15 a 18 de Outubro de 2026
+
+Uma viagem incrível pela Serra Gaúcha! Saída de Porto Alegre, hospedagem inclusa, passeios guiados e muita natureza.
+
+Pergunte-me sobre:
+• 💰 Valores
+• ⏰ Horários
+• 🗺️ Roteiro completo';
+        }
+      }
+      else if (p.includes('hohenau') || p.includes('paraguai')) {
+        if (p.includes('valor') || p.includes('preço') || p.includes('preco') || p.includes('custa') || p.includes('quanto')) {
+          resposta = '💰 O pacote para Hohenau/Paraguai está com condição especial!
+
+Investimento: R$ 2.450,00 por pessoa (em até 12x no cartão).
+
+Inclui:
+• 🚌 Transporte ida e volta (POA → Hohenau)
+• 🏨 5 noites de hospedagem
+• 🍽️ Café da manhã
+• 🛍️ Tour de compras
+• 📶 Guia acompanhante bilíngue
+
+*Valor sujeito à variação do câmbio. Garanta sua vaga!';
+        } else if (p.includes('horário') || p.includes('horario') || p.includes('hora') || p.includes('sai') || p.includes('chega')) {
+          resposta = '⏰ Horários previstos — Hohenau/Paraguai:
+
+🚌 Saída de Porto Alegre: 24/09 às 06h00
+🛂 Parada na fronteira (Ponte da Amizade): ~09h00
+🏨 Check-in hotel: 24/09 às 15h00
+🏠 Retorno: 29/09 às 08h00
+📍 Chegada em Porto Alegre: 29/09 às 18h00 (previsto)
+
+*Horários de fronteira podem variar conforme fila.';
+        } else if (p.includes('roteiro') || p.includes('passeio') || p.includes('o que') || p.includes('faz') || p.includes('compra')) {
+          resposta = '🗺️ Roteiro — Hohenau/Paraguai (24 a 29/09/2026):
+
+📅 Dia 24: Saída POA → Fronteira → Check-in Hohenau → Jantar de boas-vindas
+📅 Dia 25: Tour de compras em Ciudad del Este → Almoço → Tarde livre
+📅 Dia 26: Visita a Hohenau histórica → Mercado municipal → Noite cultural
+📅 Dia 27: Passeio opcional às Cataratas do Iguaçu (lado Paraguai/Argentina)
+📅 Dia 28: Dia livre para compras → Jantar de despedida
+📅 Dia 29: Café da manhã → Check-out → Retorno a POA
+
+Ótimo para compras e cultura paraguaia! 🌴';
+        } else {
+          resposta = '🌴 Hohenau/Paraguai — 24 a 29 de Setembro de 2026
+
+Uma experiência única no Paraguai! Compras, cultura e gastronomia. Saída de Porto Alegre com guia acompanhante.
+
+Pergunte-me sobre:
+• 💰 Valores
+• ⏰ Horários
+• 🗺️ Roteiro completo
+• 📋 Documentação';
+        }
+      }
+      else if (p.includes('alemanha') || p.includes('europa') || p.includes('germany')) {
+        if (p.includes('valor') || p.includes('preço') || p.includes('preco') || p.includes('custa') || p.includes('quanto')) {
+          resposta = '💰 O pacote para a Alemanha ainda está em fase de cotação.
+
+Investimento estimado: € 2.800,00 (aprox. R$ 16.000,00*) por pessoa.
+
+Inclui:
+• ✈️ Passagem aérea POA → Frankfurt (com escalas)
+• 🏨 10 noites de hospedagem
+• 🍽️ Café da manhã diário
+• 🚆 Passes de trem (Germany Rail Pass)
+• 🗺️ Passeios guiados em Munique, Berlim e Rothenburg
+• 🍺 Tour cervejeira em Munique
+
+*Valor estimado. Cotação final será divulgada assim que a data for confirmada (maio/2027). Entre na lista de interessados!';
+        } else if (p.includes('data') || p.includes('quando') || p.includes('maio')) {
+          resposta = '📅 A viagem para a Alemanha está programada para maio de 2027.
+
+A data exata ainda será definida conforme:
+• Melhores tarifas aéreas
+• Disponibilidade do grupo
+• Eventos locais na Alemanha
+
+📌 Previsão: entre 10 e 20 de maio de 2027
+
+Deixe seu contato no formulário que avisamos assim que a data for confirmada!';
+        } else if (p.includes('roteiro') || p.includes('passeio') || p.includes('o que') || p.includes('faz') || p.includes('cidade')) {
+          resposta = '🗺️ Roteiro previsto — Alemanha (maio/2027):
+
+✈️ Saída de Porto Alegre → Chegada em Frankfurt
+
+📍 Frankfurt (2 noites): City tour, Römerberg, Museu Städel
+📍 Rothenburg ob der Tauber (1 noite): Cidade medieval, Muralhas, Natal o ano todo
+📍 Munique (3 noites): Marienplatz, Castelo Neuschwanstein, Tour cervejeira, BMW Museum
+📍 Berlim (3 noites): Muro de Berlim, Portão de Brandemburgo, Museu do Holocausto, East Side Gallery
+📍 Dresden (1 noite): Centro histórico, Ópera Semper
+
+✈️ Retorno: Dresden → Frankfurt → POA
+
+Uma imersão completa na cultura alemã! 🏰';
+        } else {
+          resposta = '🏰 Alemanha — Maio de 2027 (saindo de Porto Alegre)
+
+Uma viagem de sonho pela Europa! Frankfurt, Munique, Berlim, Rothenburg e muito mais. Passagem, hospedagem, passeios e guia inclusos.
+
+Pergunte-me sobre:
+• 💰 Valores estimados
+• 📅 Data prevista
+• 🗺️ Roteiro completo
+• 📋 Documentação necessária';
+        }
+      }
+      else if (p.includes('documento') || p.includes('documentação') || p.includes('passaporte') || p.includes('identidade') || p.includes('rg') || p.includes('cpf')) {
+        resposta = '📋 Documentação por viagem:
+
+🇧🇷 Petrópolis/RS (Nacional):
+→ RG com foto válido ou CNH
+→ CPF
+→ Comprovante de residência
+
+🇵🇾 Hohenau/Paraguai (Fronteira):
+→ RG válido (novo modelo com chip) OU Passaporte
+→ CPF
+→ Comprovante de vacinação (se solicitado na fronteira)
+
+🇩🇪 Alemanha (Europa/Schengen):
+→ Passaporte válido (mínimo 6 meses de validade)
+→ Visto Schengen (se aplicável)
+→ Seguro viagem obrigatório (mínimo €30.000 cobertura)
+→ Comprovante de hospedagem e passagem de volta
+
+Clique nos banners de documentação na home para mais detalhes!';
+      }
+      else if (p.includes('pagamento') || p.includes('parcela') || p.includes('cartão') || p.includes('pix') || p.includes('boleto')) {
+        resposta = '💳 Formas de pagamento:
+
+• 💳 Cartão de crédito (até 12x)
+• 💠 PIX (à vista com 5% de desconto)
+• 📄 Boleto bancário (até 3x)
+• 🏦 Transferência bancária
+
+📌 Para reservar, é necessário sinal de 30% do valor total. O restante pode ser parcelado até a data da viagem.
+
+Entre em contato pelo formulário para receber o link de pagamento!';
+      }
+      else if (p.includes('oi') || p.includes('olá') || p.includes('ola') || p.includes('hey') || p.includes('eai') || p.includes('eae')) {
+        resposta = 'Olá! 👋 Bem-vindo! Sou o assistente virtual do Agente de Viagens.
+
+Posso te ajudar com informações sobre nossos pacotes:
+• 🌲 Petrópolis/RS (Out/2026)
+• 🌴 Hohenau/Paraguai (Set/2026)
+• 🏰 Alemanha (Mai/2027)
+
+Sobre qual viagem você gostaria de saber mais? Ou prefere falar sobre valores, roteiro, horários ou documentação?';
+      }
+      else if (p.includes('contato') || p.includes('telefone') || p.includes('whatsapp') || p.includes('email') || p.includes('falar')) {
+        resposta = '📞 Entre em contato conosco:
+
+• 📱 WhatsApp: (51) 99999-9999
+• 📧 E-mail: contato@agenteviagens.com.br
+• 📋 Formulário: preencha na seção "Fale Conosco" aqui no site
+• 📸 Instagram: @agenteviagens
+
+Respondemos em até 24h úteis. Para reservas urgentes, chame no WhatsApp!';
+      }
+      else if (p.includes('hospedagem') || p.includes('hotel') || p.includes('pousada')) {
+        resposta = '🏨 Sobre hospedagem:
+
+🌲 Petrópolis/RS: Hotel 3 estrelas no centro, com café da manhã incluso. Quartos duplos e triplos.
+
+🌴 Hohenau/Paraguai: Hotel confortável próximo ao centro comercial, com Wi-Fi e café da manhã.
+
+🏰 Alemanha: Hotéis 3-4 estrelas em cada cidade (Frankfurt, Munique, Berlim), todos com café da manhã continental.
+
+*Possibilidade de upgrade de quarto mediante taxa extra.';
+      }
+      else {
+        resposta = 'Hmm, não tenho certeza se entendi bem. 🤔
+
+Posso te ajudar com:
+• 🗺️ Roteiros das viagens
+• 💰 Valores e pagamento
+• ⏰ Horários de saída e chegada
+• 📋 Documentação necessária
+• 🏨 Informações sobre hospedagem
+
+Sobre qual desses assuntos você gostaria de falar? Ou me diga o nome da viagem (Petrópolis, Hohenau ou Alemanha)!';
+      }
+
+      adicionarMensagem('bot', resposta);
+    }
+
+    // Formulário de contato
+    function enviarContato(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      alert('✅ Obrigado, ' + nome + '! Sua mensagem foi enviada com sucesso. Entraremos em contato em até 24h!');
+      document.getElementById('formContato').reset();
+    }
+  </script>
+
+</body>
+</html>
